@@ -4,6 +4,7 @@
 import { useSectionInView } from "@/lib/hooks"; // Import the hook
 import Contact from "@/components/Contact";
 import { SectionName } from "@/lib/types";
+import Image from "next/image";
 
 
 export default function Home() {
@@ -27,27 +28,19 @@ export default function Home() {
       <section
         ref={homeRef}
         id="home"
-        className="h-screen bg-blue-100 w-full flex flex-col items-center justify-center px-4 scroll-mt-19"
+        className="h-screen bg-white w-full flex flex-col items-center justify-center px-4 scroll-mt-19"
       >
         <div className="text-center max-w-4xl">
-          {/* Grey Matter Logo with animation */}
+          {/* Grey Matter Fire Security Logo */}
           <div className="mb-8 flex flex-col items-center">
-            <div className="relative w-16 h-16 md:w-24 md:h-24 mb-6">
-              <div className="absolute inset-0 bg-amber-400 rounded-md animate-pulse">
-                <div className="flex items-center justify-center h-full">
-                  <div className="flex items-center animate-bounce">
-                    <div className="h-3 w-3 md:h-4 md:w-4 bg-white rounded-full mr-1"></div>
-                    <div className="h-3 w-3 md:h-4 md:w-4 border-2 border-white rounded-full"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Company Name and Tagline with fluid typography */}
-            <div className="mb-8">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">Grey Matter</h1>
-              <h2 className="text-xl md:text-2xl font-medium mb-4">Fire & Security</h2>
-              <p className="text-base md:text-lg font-medium text-gray-700">Your Protection Matters</p>
+            <div className="relative w-64 h-64 md:w-80 md:h-80">
+              <Image
+                src="/grey-matter-fire-security-logo.png"
+                alt="Grey Matter Fire Security Logo"
+                fill
+                className="object-contain"
+                priority
+              />
             </div>
           </div>
 
@@ -162,7 +155,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section
+      <section 
         ref={aboutUsRef}
         id="about-us"
         className="min-h-screen bg-yellow-100 w-full flex items-center justify-center scroll-mt-19 py-16 px-4"
