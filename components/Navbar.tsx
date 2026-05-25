@@ -39,6 +39,7 @@ export default function Navbar() {
               src="/grey-matter-fire-security-logo.png"
               alt="Grey Matter Fire & Security Logo"
               fill
+              sizes="40px"
               className="object-contain"
               priority
             />
@@ -53,17 +54,16 @@ export default function Navbar() {
           <NavigationMenuList className="gap-1">
             {navLinks.map((link) => (
               <NavigationMenuItem key={link.href}>
-                <Link href={link.href} legacyBehavior passHref>
-                  <NavigationMenuLink
-                    className={cn(
-                      navigationMenuTriggerStyle(),
-                      "bg-transparent",
-                      isActive(link.href) &&
-                        "bg-accent text-accent-foreground"
-                    )}
-                  >
-                    {link.name}
-                  </NavigationMenuLink>
+                <Link
+                  href={link.href}
+                  className={cn(
+                    navigationMenuTriggerStyle(),
+                    "bg-transparent",
+                    isActive(link.href) &&
+                      "bg-accent text-accent-foreground"
+                  )}
+                >
+                  {link.name}
                 </Link>
               </NavigationMenuItem>
             ))}
@@ -85,10 +85,8 @@ export default function Navbar() {
 
         {/* Mobile Menu Trigger */}
         <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
-          <SheetTrigger className="md:hidden">
-            <Button variant="ghost" size="icon" aria-label="Open navigation menu">
-              <Menu className="h-5 w-5" />
-            </Button>
+          <SheetTrigger className="md:hidden inline-flex items-center justify-center rounded-lg size-8 hover:bg-muted" aria-label="Open navigation menu">
+            <Menu className="h-5 w-5" />
           </SheetTrigger>
           <SheetContent side="right" className="flex flex-col pt-10">
             <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
@@ -107,6 +105,7 @@ export default function Navbar() {
                   src="/grey-matter-fire-security-logo.png"
                   alt="Grey Matter Fire & Security Logo"
                   fill
+                  sizes="32px"
                   className="object-contain"
                 />
               </div>

@@ -20,6 +20,7 @@ export default function Home() {
                 src="/grey-matter-fire-security-logo.png"
                 alt="Grey Matter Fire Security Logo"
                 fill
+                sizes="(max-width: 768px) 256px, 320px"
                 className="object-contain"
                 priority
               />

@@ -17,6 +17,7 @@ export default function Footer() {
                   src="/grey-matter-fire-security-logo.png"
                   alt="Grey Matter Fire & Security Logo"
                   fill
+                  sizes="32px"
                   className="object-contain"
                 />
               </div>
@@ -72,7 +73,7 @@ export default function Footer() {
           <div className="space-y-3">
             <h4 className="font-semibold text-foreground text-sm">24/7 Emergency</h4>
             <p className="text-sm text-muted-foreground">
-              Fire and security emergencies don't wait. Our team is available around the clock.
+              Fire and security emergencies dont wait. Our team is available around the clock.
             </p>
             <a
               href="tel:02033057585"
