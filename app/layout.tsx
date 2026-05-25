@@ -15,20 +15,21 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.VERCEL_PROJECT_PRODUCTION_URL
+      ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+      : process.env.VERCEL_URL
+        ? `https://${process.env.VERCEL_URL}`
+        : "http://localhost:3000"
+  ),
   title: {
     default: "GREYMATTER — Fire & Security Solutions",
     template: "%s | GREYMATTER",
   },
   description: "Professional fire safety and security system services. Fire detection, CCTV, access control nationwide.",
   keywords: ["fire safety", "security systems", "alarm systems", "cctv", "access control", "fire protection"],
-  openGraph: {
-    title: "GREYMATTER - Fire & Security Solutions",
-    description: "Professional fire safety and security system services",
-  },
   twitter: {
-    card: "summary",
-    title: "GREYMATTER - Fire & Security Solutions",
-    description: "Professional fire safety and security system services",
+    card: "summary_large_image",
   },
 };
 
