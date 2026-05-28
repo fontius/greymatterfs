@@ -36,7 +36,7 @@ export default function Navbar() {
         <Link href="/" className="flex items-center gap-2 shrink-0" aria-label="Grey Matter Fire & Security - Home">
           <div className="relative h-10 w-10">
             <Image
-              src="/grey-matter-fire-security-logo.png"
+              src="/greymatter-logo.svg"
               alt="Grey Matter Fire & Security Logo"
               fill
               sizes="40px"

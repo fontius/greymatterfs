@@ -13,19 +13,6 @@ export default function Home() {
       {/* Hero Section */}
       <section className="min-h-[90vh] flex flex-col items-center justify-center px-4 pt-24 pb-16">
         <div className="text-center max-w-4xl animate-fadeIn">
-          {/* Logo */}
-          <div className="mb-8 flex flex-col items-center">
-            <div className="relative w-64 h-64 md:w-80 md:h-80">
-              <Image
-                src="/grey-matter-fire-security-logo.png"
-                alt="Grey Matter Fire Security Logo"
-                fill
-                sizes="(max-width: 768px) 256px, 320px"
-                className="object-contain"
-                priority
-              />
-            </div>
-          </div>
 
           {/* Headline */}
           <div className="space-y-6">
@@ -168,13 +155,14 @@ export default function Home() {
                 </Button>
               </Link>
             </div>
-            {/* Recraft AI Image Placeholder */}
-            <div
-              className="flex-1 w-full h-64 rounded-xl border-2 border-dashed border-border bg-muted flex flex-col items-center justify-center gap-2"
-              data-recraft-prompt="Professional fire and security team in front of commercial building, diverse team in work attire, photorealistic corporate style"
-            >
-              <Shield className="h-8 w-8 text-muted-foreground/30" />
-              <span className="text-sm text-muted-foreground/50">Recraft AI Image</span>
+            <div className="flex-1 w-full h-64 md:h-80 relative rounded-xl overflow-hidden">
+              <Image
+                src="/index-about.jpg"
+                alt="Grey Matter Fire & Security professional at work"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover"
+              />
             </div>
           </div>
         </div>

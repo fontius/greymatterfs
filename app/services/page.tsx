@@ -20,7 +20,7 @@ export default function ServicesPage() {
       <PageHero
         title="Our Services"
         subtitle="Comprehensive fire detection and security solutions designed, installed, and maintained to the highest standards."
-        recraftPrompt="Dual-panel hero illustration showing fire detection systems on one side and security/CCTV systems on the other, modern split composition, photorealistic industrial style for a fire and security company"
+        imageSrc="/greymatter-services.jpg"
       />
 
       {/* Fire Detection Section */}
